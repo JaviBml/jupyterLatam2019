@@ -2,7 +2,10 @@
 # docker build -t jlab .
 #
 # docker run -it -p 8787:8888 jlab bash
+# docker run -it -p 8787:8888 --mount source=snp-vol,target=/Users/jbianco/Documents/repo_github/jupyterlab_extensions/snippet_jlab_ext jlab bash
+# docker run -it -p 8787:8888 -v /Users/jbianco/Documents/repo_github/jupyterlab_extensions:/var/code/ jlab bash
 #
+# nohup jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.notebook_dir=/ --watch &
 # nohup jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.notebook_dir=/ &
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
